@@ -1,0 +1,54 @@
+{
+    "name": "idez/dock-one",
+    "description": "Idez Dock ONE <> Laravel ",
+    "keywords": [
+        "idez",
+        "dock-one"
+    ],
+    "homepage": "https://github.com/idez/dock-one",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Pedro Santiago",
+            "email": "pedro@idez.com.br",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Idez\\DockOne\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Idez\\DockOne\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Idez\\DockOne\\DockOneServiceProvider"
+            ],
+            "aliases": {
+                "DockOne": "Idez\\DockOne\\DockOneFacade"
+            }
+        }
+    }
+}
